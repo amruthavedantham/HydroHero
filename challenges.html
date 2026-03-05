@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <title>HydroHero Challenges</title>
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/challengeStyles.css">
+<link rel="stylesheet" href="css/home.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -14,26 +15,45 @@
 
 <!-- HEADER -->
 
-<header class="topbar">
+<nav class="nav-bar">
 
-<h2 class="title">💧 Challenges</h2>
+<div class="nav-logo">
+<div class="nav-logo-icon">💧</div>
+<span>Challenges</span>
+</div>
 
-<div class="icons">
+<div class="nav-menu-container" id="navMenu">
 
-<button type="button" onclick="toggleTheme()">☀️</button>
+<a href="index.html" class="nav-link">
+<span>Home</span>
+</a>
 
-<button type="button" onclick="logout()">↗</button>
+<a href="challenges.html" class="nav-link active">
+<span>Challenges</span>
+</a>
+
+<a href="dashboard.html" class="nav-link">
+<span>Dashboard</span>
+</a>
+
+<a href="impact.html" class="nav-link">
+<span>Impact</span>
+</a>
+
+<a href="leaderboard.html" class="nav-link">
+<span>Leaderboard</span>
+</a>
+
 
 </div>
 
-</header>
+</nav>
+
 
 
 <!-- CONTENT -->
 
 <div class="container">
-
-<h1>Daily Challenges</h1>
 
 
 <!-- Challenge 1 -->
@@ -98,41 +118,6 @@
 </div>
 
 
-<!-- BOTTOM NAVBAR -->
-
-<nav class="bottomnav">
-
-<a href="index.html">
-🏠
-<br>
-Home
-</a>
-
-<a class="active" href="challenges.html">
-💧
-<br>
-Challenges
-</a>
-
-<a href="dashboard.html">
-📊
-<br>
-Dashboard
-</a>
-
-<a href="impact.html">
-📈
-<br>
-Impact
-</a>
-
-<a href="leaderboard.html">
-🏆
-<br>
-Board
-</a>
-
-</nav>
 
 
 <script>

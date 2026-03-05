@@ -8,12 +8,39 @@ color:#1E293B;
 /* ---------------------------------
 IMPACT PAGE STYLES
 ---------------------------------*/
+/*Nav bar*/
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 30px;
+    margin-bottom: 25px;
+
+    background: white;
+    border-radius: 12px;
+}
+
+.nav-menu-container{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.nav-link.active{
+    color: #2563eb;
+}
 
 /* Container */
 
 .impact-container{
 width:100%;
-max-width:1100px;
+max-width:100%;
 margin:auto;
 padding:20px;
 box-sizing:border-box;
