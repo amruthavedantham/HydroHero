@@ -80,5 +80,3 @@ HydroHero aims to:
 - Increase hygiene awareness
 - Encourage community participation
 - Track real environmental impact
-
----
