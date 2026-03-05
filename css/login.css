@@ -10,7 +10,7 @@ font-family:'Poppins', sans-serif;
 }
 
 body{
-background:#0F2854;
+background:#4989c435;
 height:100vh;
 display:flex;
 justify-content:center;
@@ -116,7 +116,7 @@ transition:0.2s;
 }
 
 .login-button:hover{
-background:#4988C4;
+background:#539bdf;
 }
 
 /* Redirect */
