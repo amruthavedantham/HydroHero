@@ -60,7 +60,6 @@ Communities compete based on total water saved, encouraging large-scale particip
 - HTML
 - CSS
 - JavaScript
-- Tailwind CSS
 
 **Backend**
 - Firebase Authentication
