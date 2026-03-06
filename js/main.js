@@ -11,7 +11,7 @@ let user = JSON.parse(localStorage.getItem("hydroUser"));
 
 let currentPage = window.location.pathname.split("/").pop();
 
-if(!user && currentPage !== "login.html" && currentPage !== "signup.html"){
+if(!user && currentPage !== "index.html" && currentPage !== "signup.html"){
 window.location.href = "index.html";
 }
 
