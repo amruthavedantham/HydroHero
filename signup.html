@@ -24,38 +24,24 @@
 <p class="signup-tagline">Become a Water Saving Hero</p>
 </div>
 
-<form class="signup-form">
+<form class="signup-form" id="signupForm">
 
-<div class="signup-input-group">
-<label class="signup-label">Full Name</label>
-<input type="text" class="signup-input" placeholder="Enter your full name" required>
-</div>
+<input type="text" id="name" class="signup-input" placeholder="Enter your full name" required>
 
-<div class="signup-input-group">
-<label class="signup-label">Email</label>
-<input type="email" class="signup-input" placeholder="Enter your email" required>
-</div>
+<input type="email" id="email" class="signup-input" placeholder="Enter your email" required>
 
-<div class="signup-input-group">
-<label class="signup-label">Password</label>
-<input type="password" class="signup-input" placeholder="Create a password" required>
-</div>
+<input type="password" id="password" class="signup-input" placeholder="Create a password" required>
 
-<div class="signup-input-group">
-<label class="signup-label">Confirm Password</label>
-<input type="password" class="signup-input" placeholder="Confirm password" required>
-</div>
+<input type="password" id="confirmPassword" class="signup-input" placeholder="Confirm password" required>
 
-<div class="signup-input-group">
-<label class="signup-label">Village / Town</label>
-<input type="text" class="signup-input" placeholder="Enter your village or town" required>
-</div>
+<input type="text" id="town" class="signup-input" placeholder="Enter your village or town" required>
 
 <button type="submit" class="signup-button">
 Create Account
 </button>
 
 </form>
+
 
 <p class="signup-redirect">
 Already a HydroHero?
@@ -65,6 +51,34 @@ Already a HydroHero?
 </div>
 
 </div>
+<script>
+document.getElementById("signupForm").addEventListener("submit", function(e){
 
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+let town = document.getElementById("town").value;
+
+let user = {
+name,
+email,
+password,
+town
+};
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+users.push(user);
+
+localStorage.setItem("users", JSON.stringify(users));
+
+alert("Account created successfully!");
+
+window.location.href = "login.html";
+
+});
+</script>
 </body>
 </html>

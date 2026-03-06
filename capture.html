@@ -180,7 +180,7 @@ best = prediction[i];
 console.log(best);
 alert("Prediction: " + " (" + (best.probability*100).toFixed(1) + "%)");
 
-if(best.className === "Tap Closed" && best.probability > 0.63){
+if(best.className === "Tap Closed" && best.probability > 0.73){
 
 alert("✅ AI Verified: Tap Closed!");
 

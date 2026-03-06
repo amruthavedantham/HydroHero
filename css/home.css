@@ -57,6 +57,20 @@ color:#1d7ddc;
 font-weight:600;
 }
 
+.logout-btn{
+background:#ff4d4d;
+border:none;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+font-family:'Poppins',sans-serif;
+}
+
+.logout-btn:hover{
+background:#e63939;
+}
+
 
 /* HERO */
 
@@ -93,6 +107,11 @@ padding:14px 28px;
 border-radius:12px;
 font-size:16px;
 cursor:pointer;
+}
+
+.home-hero-button a{
+    text-decoration: none;
+    color: white;
 }
 
 
