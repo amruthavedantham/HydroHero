@@ -62,7 +62,7 @@ Communities compete based on total water saved, encouraging large-scale particip
 - JavaScript
 
 **Backend**
-- Firebase Authentication
+- JSON-based local storage for users
 
 **Visualization**
 - Chart.js
@@ -80,3 +80,7 @@ HydroHero aims to:
 - Increase hygiene awareness
 - Encourage community participation
 - Track real environmental impact
+
+---
+## Deployment link
+[HydroHero](https://hydrohero.vercel.app/)
