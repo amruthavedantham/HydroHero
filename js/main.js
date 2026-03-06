@@ -12,13 +12,13 @@ let user = JSON.parse(localStorage.getItem("hydroUser"));
 let currentPage = window.location.pathname.split("/").pop();
 
 if(!user && currentPage !== "login.html" && currentPage !== "signup.html"){
-window.location.href = "login.html";
+window.location.href = "index.html";
 }
 
 function logout(){
 
 localStorage.removeItem("hydroUser");
 
-window.location.href = "login.html";
+window.location.href = "index.html";
 
 }

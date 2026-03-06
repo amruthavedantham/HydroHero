@@ -2,175 +2,78 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HydroHero</title>
+<title>HydroHero Login</title>
 
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/login.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<nav class="nav-bar">
+<div class="login-container">
 
-<div class="nav-logo">
-<div class="nav-logo-icon">💧</div>
-<span>HydroHero</span>
+<div class="login-card">
+
+<div class="login-brand">
+<h1 class="login-logo">💧 HydroHero</h1>
+<p class="login-tagline">Welcome Back Water Hero</p>
 </div>
 
-<div class="nav-menu-container" id="navMenu">
+<form class="login-form" id="loginForm">
 
-<a href="index.html" class="nav-link active">
-<span>Home</span>
-</a>
+<input type="email" id="loginEmail" class="login-input" placeholder="Enter your email" required>
 
-<a href="challenges.html" class="nav-link">
-<span>Challenges</span>
-</a>
+<input type="password" id="loginPassword" class="login-input" placeholder="Enter your password" required>
 
-<a href="dashboard.html" class="nav-link">
-<span>Dashboard</span>
-</a>
-
-<a href="impact.html" class="nav-link">
-<span>Impact</span>
-</a>
-
-<a href="leaderboard.html" class="nav-link">
-<span>Leaderboard</span>
-</a>
-
-<button class="logout-btn" onclick="logout()">Logout</button>
-
-
-</div>
-
-</nav>
-
-
-
-
-<section class="home-hero">
-
-<p class="home-hero-tag">🌿 Save water. Save the planet.</p>
-
-<h1 class="home-hero-title">
-<span>HydroHero</span><br>
-Gamifying Water Conservation
-</h1>
-
-<p class="home-hero-desc">
-Join thousands making a real difference. Complete challenges,
-track your impact, and compete on leaderboards.
-</p>
-
-<button class="home-hero-button">
-<a href="impact.html">💧 Start Saving Water</a>
+<button type="submit" class="login-button">
+Login
 </button>
 
-</section>
+</form>
 
-
-<section class="home-stats">
-
-<div class="home-stat-card">
-
-<div class="home-stat-icon blue">💧</div>
-
-<div>
-<h2>12,500 L</h2>
-<p>Water Saved</p>
-</div>
+<p class="login-redirect">
+New to HydroHero?
+<a href="signup.html">Create Account</a>
+</p>
 
 </div>
 
-
-<div class="home-stat-card">
-
-<div class="home-stat-icon green">👥</div>
-
-<div>
-<h2>420</h2>
-<p>Active Users</p>
 </div>
+<script>
 
-</div>
+document.getElementById("loginForm").addEventListener("submit", function(e){
 
+e.preventDefault();
 
-<div class="home-stat-card">
+let email = document.getElementById("loginEmail").value;
+let password = document.getElementById("loginPassword").value;
 
-<div class="home-stat-icon yellow">🎯</div>
+let users = JSON.parse(localStorage.getItem("users")) || [];
 
-<div>
-<h2>980</h2>
-<p>Challenges Completed</p>
-</div>
+let foundUser = users.find(user => user.email === email && user.password === password);
 
-</div>
+if(foundUser){
 
-</section>
+localStorage.setItem("hydroUser", JSON.stringify(foundUser));
 
+window.location.href = "home.html";
 
-<section class="home-features">
+}else{
 
-<h2 class="home-features-title">How HydroHero Works</h2>
+alert("Invalid email or password");
 
-<div class="home-feature-card">
+}
 
-<div class="home-feature-icon">🎯</div>
-
-<h3>Gamified Challenges</h3>
-
-<p>Complete daily water-saving tasks and earn points.</p>
-
-</div>
+});
 
 
-<div class="home-feature-card">
-
-<div class="home-feature-icon">📊</div>
-
-<h3>Impact Tracking</h3>
-
-<p>See exactly how much water you've saved.</p>
-
-</div>
-
-
-<div class="home-feature-card">
-
-<div class="home-feature-icon">🏆</div>
-
-<h3>Community Leaderboard</h3>
-
-<p>Compete with friends and community.</p>
-
-</div>
-
-</section>
-
-
-<section class="home-cta">
-
-<h2>Ready to be a HydroHero?</h2>
-
-<p>Every drop counts.</p>
-
-<button class="home-cta-button"><a href="challenges.html">Join Now →</a></button>
-
-</section>
-
-
-<footer class="home-footer">
-
-© 2026 HydroHero. Making every drop count 💧
-
-</footer>
-
-<script src="js/main.js"></script>
+</script>
 </body>
+
 </html>
